@@ -13,6 +13,7 @@
     2. `requests`
     3. `time`
     4. `os`
+    5. `pypd`
 3. GETTING A TELEGRAM KEY PAIR  
     URL: https://www.assistanz.com/get-server-notification-telegram-app/
 4. GETTING A PAGERDUTY ACCESS KEY  
@@ -24,7 +25,7 @@
 
 2. cd pagerduty-telegram
 
-3. Change the environment  
+3. Change the environment at the list.env file  
     TELEGRAM_ID=`your telegramid`  
     TELEGRAM_TOKEN=`telegram token`  
     SUBDOMAIN=`something`  
