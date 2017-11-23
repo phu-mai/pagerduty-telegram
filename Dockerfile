@@ -1,9 +1,10 @@
 FROM python:latest
 ADD . /app
 WORKDIR /app
-ENV TELEGRAM_ID='2958377683'\
-    TELEGRAM_TOKEN='460566288:AAF9-ni1EkSgVtm18d1dUIaZI0iszmbFJra'\
+ENV TELEGRAM_ID='TELEGRAM_ID'\
+    TELEGRAM_TOKEN='TELEGRAM_TOKEN'\
     SUBDOMAIN='something'\
-    API_ACCESS_KEY='PZA_McWbnHWEr-57Fnqu'
-RUN  pip install -r requirements.txt
-CMD ["python", "paygerduty-alert-telegram.py"]
+    API_ACCESS_KEY='API_ACCESS_KEY'
+RUN apt-get update && apt-get -y  install cron && pip install -r requirements.txt
+RUN chmod +x /app/check_service.sh
+CMD ["bash", "/app/check_service.sh", "&"]
